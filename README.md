@@ -1,4 +1,5 @@
 # Slated Film API Autocomplete(ES6)
+
 > **Note:** This project uses `https://cors.io/` to work-around slated film API's cors restriction.
 
 ##### Getting Started
@@ -16,6 +17,6 @@ installed.
 
 Clone this repository and execute the following commands in a terminal:
 
-* `git checkout master`
-* `npm install`
-* `npm run serve`
+- `git checkout master`
+- `npm install`
+- `npm run serve`
