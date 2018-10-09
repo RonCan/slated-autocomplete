@@ -1,0 +1,18 @@
+[ng-cloak] {
+  display: none;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.md-autocomplete-suggestions li {
+  height: 24vh;
+  min-height: 12vh;
+  max-height: 24vh !important;
+  white-space: normal;
+}

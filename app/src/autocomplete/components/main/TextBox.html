@@ -1,0 +1,30 @@
+<form ng-submit="$event.preventDefault()">
+  <p><code>autocomplete</code> search bar calling <code>www.slated.com</code>'s films API.</p>
+  <md-autocomplete
+          md-selected-item="$ctrl.selectedItem"
+          md-search-text-change="$ctrl.searchTextChange($ctrl.searchText)"
+          md-search-text="$ctrl.searchText"
+          md-selected-item-change="$ctrl.selectedItemChange(item)"
+          md-items="item in $ctrl.querySearch($ctrl.searchText)"
+          md-item-text="item.display"
+          md-min-length="0"
+          md-dropdown-items="10"
+          placeholder="What is your favorite movie?">
+    <md-item-template style="display: flex; flex-direction: row">
+      <md-list flex>
+        <md-list-item class="md-3-line">
+          <img ng-src={{item.source}} class="md-avatar" alt="Nooo" />
+          <div class="md-list-item-text" layout="column">
+            <h3>{{ item.display }}</h3>
+            <h4>{{item.year}}</h4>
+            <p>{{item.description}}</p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-item-template>
+    <md-not-found>
+      No states matching "{{$ctrl.searchText}}" movies were found.
+      <a ng-click="$ctrl.newState($ctrl.searchText)">Create a new one!</a>
+    </md-not-found>
+  </md-autocomplete>
+</form>
