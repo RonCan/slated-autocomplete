@@ -15,7 +15,7 @@
         <md-list-item class="md-3-line">
           <img ng-src={{item.source}} class="md-avatar" alt="Nooo" />
           <div class="md-list-item-text" layout="column">
-            <h3>{{ item.display }}</h3>
+            <h3 md-highlight-text="$ctrl.searchText" md-highlight-flags="^i">{{ item.display }}</h3>
             <h4>{{item.year}}</h4>
             <p>{{item.description}}</p>
           </div>
